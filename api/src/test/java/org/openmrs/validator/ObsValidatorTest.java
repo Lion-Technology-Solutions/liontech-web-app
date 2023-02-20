@@ -469,7 +469,7 @@ public class ObsValidatorTest extends BaseContextSensitiveTest {
 		obsValidator.validate(obs, errors);
 		assertTrue(errors.hasErrors());
 		
-		inValidChild.setVoided(true);
+		inValidChild.setVoided(false);
 		errors = new BindException(obs, "obs");
 		obsValidator.validate(obs, errors);
 		assertFalse(errors.hasErrors());
